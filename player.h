@@ -4,11 +4,17 @@
 
 class Player {
     public:
-        Player();
+        Player(float speed);
         void update();
         void render(sf::RenderWindow &window);
+        sf::FloatRect getBounds() const;
+        void setPosition(float x, float y);
+        sf::Vector2f getPosition() const;
+        float getSpeed() const;
+        void setSpeed(float newSpeed);
     private:
         sf::RectangleShape shape; // Player's shape
+        float speed; // Player's speed
 };
 
 

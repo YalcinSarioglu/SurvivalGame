@@ -8,11 +8,12 @@ class Game {
         Game();
         void run();
     private:
+        sf::RenderWindow window;
+        Player player;
         void processInput();
         void update();
         void render();
-        sf::RenderWindow window;
-        Player player;
+        void checkBoundaries();
 };
 
 

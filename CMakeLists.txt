@@ -7,15 +7,8 @@ set(SFML_DIR "C:/SFML/lib/cmake/SFML")
 
 find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 
-add_executable(Survivor main.cpp
-        game.cpp
-        game.h
-        enemy.cpp
-        enemy.h
-        player.cpp
-        player.h
-        environment.cpp
-        environment.h
-)
+file(GLOB SOURCES "src/*.cpp" "src/*.h")
+
+add_executable(Survivor ${SOURCES})
 
 target_link_libraries(Survivor sfml-graphics sfml-window sfml-system)

@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <sstream>
 #include "player.h"
+#include "environment.h"
 
 class Game {
     public:
@@ -19,6 +20,7 @@ class Game {
         void render();
         void checkBoundaries();
         void updateTime();
+        Environment environment;
 };
 
 

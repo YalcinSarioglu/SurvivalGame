@@ -34,6 +34,7 @@ void Game::render() {
     window.clear();
     player.render(window);
     window.draw(TimeText);
+    environment.draw(window);
     window.display();
 }
 
